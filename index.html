@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUTOFABRICADOR · Factory Command Center (DEMO)</title>
+<link rel="stylesheet" href="css/fuentes.css">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ CABECERA ============ -->
+  <header id="cabecera">
+    <div id="logo">
+      <canvas id="logoEngranaje" width="24" height="24"></canvas>
+      <div><div id="logoTitulo"></div><div id="logoSub"></div></div>
+    </div>
+    <nav id="pestanas"></nav>
+    <div id="cabDerecha">
+      <button id="btnPedir" class="btnPedir" title="Pedir un programa a la fábrica"><img alt="">Pedir encargo</button>
+      <span class="insignia" title="Simulación sin conexión con AUTOFABRICADOR">DEMO</span>
+      <button id="btnCompleta" class="btnCab" title="Pantalla completa">⛶</button>
+    </div>
+  </header>
+
+  <!-- ============ PANEL LATERAL ============ -->
+  <aside id="lateral">
+    <section class="panel" id="bienvenida">
+      <canvas id="retrato" width="24" height="32"></canvas>
+      <div class="bocadillo">
+        <button id="btnPlegarBien" class="plegar" title="Plegar">–</button>
+        <p id="textoBien"></p>
+        <div class="botonesBien"><button id="btnBienA" class="btn primario"></button><button id="btnBienB" class="btn"></button></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Estado de la Fábrica</h2>
+      <div class="estadoLinea"><i id="icoEstado" class="ico"></i><span id="estadoTexto" class="estadoTxt">—</span></div>
+      <dl class="datos">
+        <dt>Encargos en curso</dt><dd id="vEnCurso">0</dd>
+        <dt>En cola</dt><dd id="vCola">0</dd>
+        <dt>Completados hoy</dt><dd id="vCompletados">0</dd>
+        <dt>Errores</dt><dd id="vErrores">0</dd>
+      </dl>
+    </section>
+
+    <section class="panel crece">
+      <h2 id="tituloAgentes">Agentes</h2>
+      <ul id="listaAgentes"></ul>
+    </section>
+
+    <section class="panel">
+      <h2>Mapa de la Fábrica</h2>
+      <canvas id="minimapa" width="240" height="64"></canvas>
+    </section>
+  </aside>
+
+  <!-- ============ ESCENA ============ -->
+  <main id="escenaCont">
+    <canvas id="escena"></canvas>
+  </main>
+
+  <!-- ============ VERBOS (estilo aventura) ============ -->
+  <section id="aventura">
+    <div id="frase"></div>
+    <div id="zonaVerbos">
+      <div id="verbos"></div>
+      <div id="opcionesDialogo"></div>
+      <div id="inventario"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTROLES ============ -->
+  <footer id="controles">
+    <div class="grupo">
+      <button id="btnEjecutar" class="ctrl verde"><img alt="">Ejecutar</button>
+      <button id="btnPausar" class="ctrl ambar"><img alt="">Pausar</button>
+      <button id="btnDetener" class="ctrl rojo"><img alt="">Detener</button>
+    </div>
+    <div class="grupo"><span class="etq">» Velocidad:</span><div id="velocidades"></div></div>
+    <div class="grupo crece" id="registro" title="Abrir historial"><img id="icoRegistro" alt=""><span class="etq">Registro:</span><div id="registroTexto"></div></div>
+    <div class="grupo"><img id="icoReloj" alt=""><span id="reloj">--:--</span></div>
+  </footer>
+</div>
+
+<div id="capaVentanas"></div>
+
+<!-- Configuración (edítala libremente) -->
+<script src="config/tema.js"></script>
+<script src="config/escena.js"></script>
+<script src="config/robots.js"></script>
+<script src="config/flujo.js"></script>
+<script src="config/dialogos.js"></script>
+<script src="config/menu.js"></script>
+<!-- Motor -->
+<script src="js/nucleo.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/personajes.js"></script>
+<script src="js/registro.js"></script>
+<script src="js/navegacion.js"></script>
+<script src="js/simulacion.js"></script>
+<script src="js/motor.js"></script>
+<script src="js/agarre.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/ventanas.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/dependencias.js"></script>
+<script src="js/adaptador.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
