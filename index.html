@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AUTOFABRICADOR · Factory Command Center (DEMO)</title>
+<title>AUTOFABRICADOR · Factory Command Center V2 (DEMO)</title>
 <link rel="stylesheet" href="css/fuentes.css">
 <link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="design/experiencia-v2.css">
 </head>
 <body>
 <div id="app">
@@ -60,6 +61,10 @@
   <!-- ============ ESCENA ============ -->
   <main id="escenaCont">
     <canvas id="escena"></canvas>
+    <div id="experienciaV2" aria-label="Mapa de accesos rápidos de la fábrica">
+      <div class="af-v2-row"><div class="af-v2-placa">✦ EL TALLER VIVO · V2 · DEMO</div><div class="af-v2-jump" role="group" aria-label="Enfocar departamentos"></div></div>
+      <div class="af-v2-row"><div id="af-v2-msg" role="status" aria-live="polite"></div><div id="af-v2-settings" role="group" aria-label="Opciones de visualización"></div></div>
+    </div>
   </main>
 
   <!-- ============ VERBOS (estilo aventura) ============ -->
@@ -109,5 +114,6 @@
 <script src="js/dependencias.js"></script>
 <script src="js/adaptador.js"></script>
 <script src="js/main.js"></script>
+<script src="design/experiencia-v2.js"></script>
 </body>
 </html>
